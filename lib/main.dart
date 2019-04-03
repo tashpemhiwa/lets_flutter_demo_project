@@ -88,7 +88,7 @@ class HomeScreenState extends State<HomeScreen> {
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               image: NetworkImage(
-                                  "https://source.unsplash.com/random/300x300"+DateTime.now().millisecondsSinceEpoch.toString()),
+                                  "https://source.unsplash.com/random/300x300?t="+DateTime.now().millisecondsSinceEpoch.toString()),
                               fit: BoxFit.cover),
                           boxShadow: [
                             BoxShadow(
@@ -137,86 +137,6 @@ class HomeScreenState extends State<HomeScreen> {
       )
         );
       });
-  }
-
-//  @override
-//  Widget build(BuildContext context) {
-//    return Scaffold(
-//      appBar: AppBar(
-//        title: Text("Let's Flutter!"),
-//      ),
-//      body: Container(
-//        child: Center(
-//          child: Padding(
-//              padding: const EdgeInsets.all(8.0),
-//              child: Container(
-//                color: Colors.yellow,
-//                child: Row(
-//                  children: <Widget>[
-//                    Padding(
-//                      padding: const EdgeInsets.all(8.0),
-//                      child: Icon(Icons.library_books),
-//                    ),
-//                    Text('Welcome. Click the FAB to see number facts...'),
-//                  ],
-//                ),
-//              )),
-//        ),
-//      ),
-//      floatingActionButton: FloatingActionButton(
-//          child: Icon(Icons.android),
-//          onPressed: () =>
-//              Navigator.of(context)
-//                  .push(
-//                  MaterialPageRoute(builder: (context) => FactsScreen()))),
-//      bottomNavigationBar: BottomNavigationBar(
-//        currentIndex: _currentIndex,
-//        fixedColor: Colors.black,
-//        unselectedItemColor: Colors.orange,
-//        backgroundColor: Colors.brown,
-//        items: [
-//          BottomNavigationBarItem(icon: Icon(Icons.apps), title: Text('Trivia'),
-//
-//          ),
-//          BottomNavigationBarItem(
-//              icon: Icon(Icons.keyboard), title: Text('Year')),
-//          BottomNavigationBarItem(
-//              icon: Icon(Icons.vertical_align_center), title: Text('Math')),
-//          BottomNavigationBarItem(
-//              icon: Icon(Icons.date_range), title: Text('Date')),
-//
-//        ],
-//        type: BottomNavigationBarType.shifting,
-//        onTap: (index) {
-//          setState(() { _currentIndex = index; });
-//        }
-//      ),
-//    );
-//  }
-
-}
-
-class FactsScreen extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    return FactsScreenState();
-  }
-}
-
-class FactsScreenState extends State<FactsScreen> {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("Number facts...}"),
-        ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: SizedBox(
-              height: 4,
-              child: LinearProgressIndicator(value: null)),
-        ));
   }
 
 }
